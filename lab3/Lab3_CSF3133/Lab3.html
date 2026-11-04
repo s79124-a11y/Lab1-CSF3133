@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 3 - Interactive Contact Form</title>
+    <style>
+        /* Basic styling to make the page look neat */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f9;
+        }
+        .container {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        .slogan {
+            color: #666;
+            font-style: italic;
+            font-size: 1.1em;
+        }
+        /* Styling for the form and calculator to make them look organized */
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        input[type="email"],
+        input[type="date"],
+        input[type="number"] {
+            width: 100%;
+            max-width: 300px;
+            padding: 5px;
+            margin-top: 5px;
+        }
+        input[type="range"] {
+            margin-top: 10px;
+        }
+        button {
+            margin-top: 15px;
+            padding: 10px 15px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .calculator-result {
+            margin-top: 15px;
+            font-weight: bold;
+            font-size: 1.2em;
+            color: #0056b3;
+        }
+        .footer-text {
+            text-align: center;
+            color: #777;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 3. Header Section -->
+    <div class="container">
+        <h1>Welcome to Our Website</h1>
+        <!-- Inline element <span> used inside the header block -->
+        <span class="slogan">Your satisfaction is our priority.</span>
+    </div>
+
+    <!-- 4. Content Section -->
+    <div class="container">
+        
+        <!-- Contact Form -->
+        <div>
+            <h2>Contact Us</h2>
+            <form action="#" method="POST">
+                
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                <label for="contact-date">Preferred Contact Date:</label>
+                <input type="date" id="contact-date" name="contact-date" required>
+
+                <label for="satisfaction">Satisfaction Level (1-10):</label>
+                <!-- The oninput attribute updates the span text dynamically as you drag -->
+                <input type="range" id="satisfaction" name="satisfaction" min="1" max="10" value="5" oninput="updateSatisfactionValue(this.value)">
+                <span id="range-value">5</span>
+
+                <br>
+                <button type="submit">Submit Contact Info</button>
+            </form>
+        </div>
+
+        <hr>
+
+        <!-- Inline Calculator -->
+        <div>
+            <h2>Inline Calculator</h2>
+            <p>Enter two numbers to see their sum dynamically:</p>
+            
+            <form oninput="sumResult.value = parseInt(num1.value) + parseInt(num2.value)">
+                <!-- Number inputs with IDs -->
+                <label for="num1">First Number:</label>
+                <input type="number" id="num1" name="num1" value="0">
+
+                <label for="num2">Second Number:</label>
+                <input type="number" id="num2" name="num2" value="0">
+                
+                <!-- Output element linked to the inputs -->
+                <div class="calculator-result">
+                    The Sum is: <output name="sumResult" for="num1 num2">0</output>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+    <!-- 5. Footer Section -->
+    <div class="container" style="text-align: center; background-color: #e9ecef;">
+        <p class="footer-text">
+            Contact us at: info@example.com | Phone: +1 234 567 890
+        </p>
+        <!-- Using HTML Entity for copyright symbol -->
+        <p class="footer-text">&copy; 2023 My Interactive Website. All rights reserved.</p>
+    </div>
+
+    <!-- JavaScript to update the Range Slider text (Optional but good for UX) -->
+    <script>
+        function updateSatisfactionValue(val) {
+            document.getElementById('range-value').textContent = val;
+        }
+    </script>
+
+</body>
+</html>
