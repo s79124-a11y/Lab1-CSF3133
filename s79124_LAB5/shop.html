@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Campus Bookstore</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="shop.css">
+</head>
+<!--
+Error 1 (shop.html, Line 6): Missing semicolon at the end of the Google Fonts href URL.
+Error 2 (shop.html, Line 9): Contains an internal <style> block. The instructions say to use an external CSS file.
+Error 3 (shop.html, Line 17): The h1 title is not blue and centred. It requires an ID (e.g., id="main-title") to be targeted by the CSS.
+Error 4 (shop.html, Line 19): Table is missing the id="products", so the CSS rules in shop.css will not apply to it.
+Error 5 (shop.html, Line 20): Typo in table header tag, "<thItem>" should be "<th>".
+Error 6 (shop.html, Line 27): Typo in copyright symbol, "&copy" is missing the semicolon, should be "&copy;".
+Error 7 (shop.css, Line 15): "float: left;" on li causes the parent ul to not wrap around the list items properly. Should use "display: inline-block;" instead.
+Error 8 (shop.css, Line 18): "display: inline;" on the anchor tag prevents vertical padding from working correctly. Should be "display: block;".
+Error 9 (shop.css, Line 31): Typo in border style, "soild" should be "solid".
+Error 10 (shop.css, Line 41): The header background color is green (#04AA6D). The instruction says the title/headers should be blue. (Changed to #1B4F72).
+Error 11 (shop.css, Missing rule): There is no CSS rule defining the h1 to be blue and centred. Added "#main-title { color: #1B4F72; text-align: center; }".
+-->
+<body>
+    
+    <h1 id="main-title">Campus Bookstore</h1>
+    <p>Textbooks, stationery and more for every student.</p>
+    
+    <table id="products">
+        <tr><th>Item</th><th>Category</th><th>Price (RM)</th></tr>
+        <tr><td>Web Design Basics</td><td>Textbook</td><td>45.00</td></tr>
+        <tr><td>A4 Notebook</td><td>Stationery</td><td>6.50</td></tr>
+        <tr><td>USB Drive 32GB</td><td>Gadget</td><td>25.00</td></tr>
+        <tr><td>Highlighter Set</td><td>Stationery</td><td>9.90</td></tr>
+    </table>
+    <footer>&copy; 2026 Campus Bookstore</footer>
+</body>
+</html>

@@ -1,0 +1,151 @@
+/* --- Global Styles --- */
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FBF7F0; /* From Appendix */
+    color: #333;
+}
+
+/* --- 1. Header with Background Image --- */
+header {
+    /* Replace 'background.jpg' with your actual image file name */
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+header h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Helps text stand out */
+}
+
+header p {
+    font-size: 1.1rem;
+    margin-top: 0;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+/* --- 2. Horizontal Navigation Bar --- */
+nav {
+    background-color: #2C2C2C;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+nav li {
+    float: left;
+}
+
+nav a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #111;
+}
+
+nav a.active {
+    background-color: #E67E22; /* Orange color from Appendix */
+}
+
+/* --- 3. Content Section and Text Formatting --- */
+main {
+    width: 90%;
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+/* Paragraph formatting */
+section p {
+    text-align: justify;
+    line-height: 1.6;
+}
+
+/* --- 4. Notice (Inline CSS already applied in HTML, but adding here for structure if needed) --- */
+/* Note: The instructions requested inline CSS for the notice, so it's mostly handled in the HTML file. */
+
+/* --- 5. Styled Table --- */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+}
+
+th, td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #E67E22; /* Orange color */
+    color: white;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+/* Align the prices (4th column) to the right */
+th:nth-child(4), 
+td:nth-child(4) {
+    text-align: right;
+}
+
+/* Alternating row colors */
+tbody tr:nth-child(even) {
+    background-color: #FDEBD0;
+}
+
+/* Hover effect for table rows */
+tbody tr:hover {
+    background-color: #EFE6D8; /* Light neutral color from Appendix */
+}
+
+/* --- 6. Footer --- */
+footer {
+    background-color: #EFE6D8; /* Light beige from Appendix */
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    color: #333;
+    margin-top: 40px;
+}
+
+/* --- Testing / Responsive Adjustments --- */
+@media (max-width: 600px) {
+    nav li {
+        float: none;
+        text-align: center;
+    }
+    
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    /* Make table scrollable on small screens if it overflows */
+    section#menu {
+        overflow-x: auto;
+    }
+}

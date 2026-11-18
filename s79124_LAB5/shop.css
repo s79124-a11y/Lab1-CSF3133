@@ -1,0 +1,55 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-image: url('books.JPG');
+    background-repeat: no-repeat;
+    background-position: right top;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    display: inline-block;
+}
+li a {
+    display: block;
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+
+#products {
+    border-collapse: collapse;
+    width: 100%;
+}
+#products td, #products th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+#products tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+#products tr:hover {
+    background-color: #ddd;
+}
+#products th {
+    background-color: #1B4F72;
+    color: white;
+}
+footer {
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 10px;
+}
+#main-title {
+    color: #1B4F72;
+    text-align: center;
+}

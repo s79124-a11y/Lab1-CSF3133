@@ -1,0 +1,128 @@
+/* General Body & Typography */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f7f9;
+    color: #2c3e50;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Header Styling */
+header {
+    background-color: #003366; /* UMT Deep Blue */
+    color: #ffffff;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+header p {
+    margin: 5px 0 0;
+    font-weight: 300;
+    color: #ffd700; /* Gold Accent */
+}
+
+/* Navigation Bar Styling */
+nav {
+    background-color: #002244;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li a {
+    display: block;
+    color: #ffffff;
+    text-align: center;
+    padding: 14px 24px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Navigation Hover Effect */
+nav ul li a:hover {
+    background-color: #ffd700;
+    color: #002244;
+}
+
+/* Main Content Layout */
+main {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+article, section {
+    background-color: #ffffff;
+    padding: 25px 30px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+h2 {
+    color: #003366;
+    border-bottom: 2px solid #ffd700;
+    padding-bottom: 8px;
+    margin-top: 0;
+}
+
+/* Paragraph Alignment & Spacing */
+article p {
+    text-align: justify;
+    margin-bottom: 15px;
+}
+
+/* Table Styling (Rubric: borders, alternating rows, padding, hover) */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th, td {
+    border: 1px solid #d0d7de;
+    padding: 12px 15px;
+    text-align: left;
+}
+
+th {
+    background-color: #003366;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+/* Alternating Row Colors */
+tbody tr:nth-child(even) {
+    background-color: #eef3f8;
+}
+
+/* Table Row Hover Effect */
+tbody tr:hover {
+    background-color: #dce8f5;
+    transition: background-color 0.2s;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #e2e8f0;
+    color: #334155;
+    text-align: center;
+    padding: 15px 10px;
+    font-size: 0.9rem;
+    border-top: 1px solid #cbd5e1;
+}
